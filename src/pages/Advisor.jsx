@@ -87,7 +87,7 @@ export default function Advisor() {
         </header>
 
         <div className="adv-head">
-          <div className="adv-emoji">🧭</div>
+          <div className="adv-emoji">💡</div>
           <div>
             <h1>AI 产品顾问</h1>
             <p>填入你的产品，给出目标或问题 —— 顾问会做专家诊断、推荐最合适的范式，并给出落地方案与 demo 设想。</p>

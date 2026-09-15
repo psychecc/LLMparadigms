@@ -50,7 +50,7 @@ export default function Workspace() {
           </div>
         )}
 
-        {lib.length === 0 && !creating && <div className="ws-empty">还没有产品。点「+ 新建产品」开始，或从 🧭 顾问 / 🔬 竞品里保存产品到这里。</div>}
+        {lib.length === 0 && !creating && <div className="ws-empty">还没有产品。点「+ 新建产品」开始，或从 💡 顾问 / 🔬 竞品里保存产品到这里。</div>}
 
         <div className="ws-grid">
           {lib.map((p) => {

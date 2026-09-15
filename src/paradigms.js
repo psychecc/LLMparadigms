@@ -8,7 +8,7 @@ export const PARADIGMS = [
     examples: ['ChatGPT', 'Claude', 'Kimi', '豆包'],
     method: '核心不是“做一个聊天框”，而是围绕任务入口、上下文管理、记忆、工具调用和安全边界建立可持续体验。',
     demoHint: '多轮问答、历史上下文、快捷问题、工具调用状态。',
-    accent: '#002fa7',
+    accent: '#16845a',
   },
   {
     id: 'copilot', category: 'toC', n: 'C2', icon: '✍️', title: 'AI 副驾驶', en: 'Copilot', tag: '协作者',
@@ -17,7 +17,7 @@ export const PARADIGMS = [
     examples: ['GitHub Copilot', 'Notion AI', '浏览器 AI 侧栏'],
     method: '副驾驶必须“贴着原流程走”：触发点、上下文采集、一键应用、撤销/对比和降级策略比模型本身更关键。',
     demoHint: '选区改写、上下文建议、一键应用、撤销与对比。',
-    accent: '#155eef',
+    accent: '#2aa66b',
   },
   {
     id: 'agent', category: 'toC', n: 'C3', icon: '🤖', title: 'AI 代理', en: 'Agent', tag: '执行者',
@@ -29,7 +29,7 @@ export const PARADIGMS = [
     accent: '#6941c6',
   },
   {
-    id: 'companion', category: 'toC', n: 'C4', icon: '🫂', title: 'AI 陪伴', en: 'Companion', tag: '陪伴者',
+    id: 'companion', category: 'toC', n: 'C4', icon: '❤️', title: 'AI 陪伴', en: 'Companion', tag: '陪伴者',
     blurb: 'AI 提供情感支持、社交互动、角色扮演和长期关系维护，用户购买的是关系感而非效率。',
     role: '陪伴者',
     examples: ['Character.AI', 'Replika', '星野'],
@@ -44,7 +44,7 @@ export const PARADIGMS = [
     examples: ['抖音推荐', '小红书 AI 助手', 'Perplexity 购物/研究推荐'],
     method: '推荐引擎不是“猜你喜欢”的文案包装，而是偏好采集、候选召回、排序解释、反馈闭环和冷启动策略。',
     demoHint: '偏好输入、推荐列表、理由解释、反馈学习。',
-    accent: '#0086c9',
+    accent: '#58b982',
   },
   {
     id: 'create', category: 'toC', n: 'C6', icon: '🎨', title: 'AI 创作工坊', en: 'Creation Studio', tag: '创作者',
@@ -56,7 +56,7 @@ export const PARADIGMS = [
     accent: '#b54708',
   },
   {
-    id: 'router', category: 'toC', n: 'C7', icon: '🧭', title: 'AI 教练/导师', en: 'Coach / Mentor', tag: '指导者',
+    id: 'router', category: 'toC', n: 'C7', icon: '🎓', title: 'AI 教练/导师', en: 'Coach / Mentor', tag: '指导者',
     blurb: 'AI 为用户提供个性化学习路径、行为反馈、阶段目标和练习任务，把一次性问答变成持续成长系统。',
     role: '指导者',
     examples: ['Duolingo Max', '可汗学院 AI 助教', '编程/健身 AI 教练'],
@@ -72,7 +72,7 @@ export const PARADIGMS = [
   },
   {
     id: 'bizcopilot', category: 'toB', n: 'B2', icon: '🧑‍💼', title: '行业 SaaS 副驾', en: 'Vertical Copilot', tag: '嵌入业务系统',
-    blurb: '深度嵌入 CRM/HR/法务等业务系统的垂直副驾，读写业务对象。代表：销售/客服 Copilot。', accent: '#7c9cff',
+    blurb: '深度嵌入 CRM/HR/法务等业务系统的垂直副驾，读写业务对象。代表：销售/客服 Copilot。', accent: '#6fcf9f',
   },
   {
     id: 'support', category: 'toB', n: 'B3', icon: '🎧', title: '智能客服', en: 'AI Support', tag: '自动应答+坐席辅助',

@@ -1,14 +1,14 @@
 :root {
   --bg: #ffffff;
-  --bg-soft: #f5f8ff;
+  --bg-soft: #f3fbf6;
   --panel: #ffffff;
-  --panel-2: #eef3ff;
-  --line: #d8e2f3;
+  --panel-2: #e9f7ef;
+  --line: #cfe8d8;
   --text: #172033;
   --muted: #64718a;
   --faint: #8a96aa;
-  --accent: #002fa7;
-  --accent-2: #155eef;
+  --accent: #16845a;
+  --accent-2: #2aa66b;
   --radius: 12px;
   --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace;
 }
@@ -27,7 +27,7 @@ body {
 a { color: inherit; }
 button, input, textarea, select { font-family: inherit; font-size: 14px; color: var(--text); }
 textarea { resize: none; }
-code { font-family: var(--mono); background: #eef3ff; color: var(--accent); padding: 1px 5px; border-radius: 5px; font-size: 0.88em; }
+code { font-family: var(--mono); background: var(--panel-2); color: var(--accent); padding: 1px 5px; border-radius: 5px; font-size: 0.88em; }
 
 /* ---------------- Home ---------------- */
 .home { min-height: 100%; padding: 64px 24px 48px; }
@@ -283,12 +283,12 @@ code { font-family: var(--mono); background: #eef3ff; color: var(--accent); padd
 .bi-sql-bar { display: flex; justify-content: space-between; align-items: center; padding: 8px 13px; background: var(--bg-soft); border-bottom: 1px solid var(--line); font-size: 12px; color: var(--muted); }
 .bi-sql-bar button { background: var(--panel-2); border: 1px solid var(--line); border-radius: 7px; padding: 4px 10px; color: var(--text); cursor: pointer; font-size: 12px; }
 .sql-block { margin: 0; padding: 14px; font-family: var(--mono); font-size: 12.8px; line-height: 1.7; color: var(--text); white-space: pre-wrap; overflow-x: auto; }
-.sql-block .kw { color: #7c9cff; font-weight: 600; }
+.sql-block .kw { color: #6fcf9f; font-weight: 600; }
 .bi-card { background: var(--panel); border: 1px solid var(--line); border-radius: 11px; padding: 15px; }
 .bi-card h4 { margin: 0 0 10px; font-size: 14px; }
 .bi-chart .chart-type { display: inline-block; background: var(--accent); color: #0b0e16; font-size: 11.5px; font-weight: 700; padding: 2px 9px; border-radius: 999px; margin-bottom: 10px; }
 .chart-mock { display: flex; align-items: flex-end; gap: 8px; height: 90px; padding: 8px 0; }
-.chart-mock span { flex: 1; background: linear-gradient(180deg, var(--accent), #7c9cff44); border-radius: 4px 4px 0 0; min-height: 6px; }
+.chart-mock span { flex: 1; background: linear-gradient(180deg, var(--accent), #6fcf9f44); border-radius: 4px 4px 0 0; min-height: 6px; }
 .chart-note { margin: 6px 0 0; color: var(--muted); font-size: 12.8px; }
 
 /* Support */
@@ -397,7 +397,7 @@ code { font-family: var(--mono); background: #eef3ff; color: var(--accent); padd
   text-decoration: none; margin-bottom: 28px; transition: border-color 0.16s, transform 0.16s;
   position: relative; overflow: hidden;
 }
-.advisor-banner::after { content: ''; position: absolute; right: -40px; top: -40px; width: 160px; height: 160px; background: radial-gradient(circle, #7c9cff44, transparent 70%); }
+.advisor-banner::after { content: ''; position: absolute; right: -40px; top: -40px; width: 160px; height: 160px; background: radial-gradient(circle, #6fcf9f44, transparent 70%); }
 .advisor-banner:hover { border-color: var(--accent); transform: translateY(-2px); }
 .ab-left { display: flex; align-items: center; gap: 16px; }
 .ab-emoji { font-size: 34px; }
@@ -709,10 +709,10 @@ code { font-family: var(--mono); background: #eef3ff; color: var(--accent); padd
 .ppt-cta {
   margin-top: 18px; display: flex; align-items: center; justify-content: space-between; gap: 18px;
   padding: 20px 24px; border-radius: var(--radius);
-  background: linear-gradient(120deg, rgba(124,156,255,0.16), rgba(124,156,255,0.04));
+  background: linear-gradient(120deg, rgba(22,132,90,0.16), rgba(22,132,90,0.04));
   border: 1px solid var(--accent); position: relative; overflow: hidden;
 }
-.ppt-cta::after { content: ''; position: absolute; right: -30px; top: -40px; width: 150px; height: 150px; background: radial-gradient(circle, rgba(124,156,255,0.35), transparent 70%); }
+.ppt-cta::after { content: ''; position: absolute; right: -30px; top: -40px; width: 150px; height: 150px; background: radial-gradient(circle, rgba(22,132,90,0.35), transparent 70%); }
 .ppt-cta-left { display: flex; align-items: center; gap: 16px; z-index: 1; }
 .ppt-ico { font-size: 34px; }
 .ppt-cta-left strong { font-size: 17px; }
@@ -816,7 +816,7 @@ code { font-family: var(--mono); background: #eef3ff; color: var(--accent); padd
 /* ================= Flow (产品主线 wizard) ================= */
 .flow-banner { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 22px 26px; margin-bottom: 14px; border-radius: var(--radius); text-decoration: none; position: relative; overflow: hidden; background: linear-gradient(120deg, #1d2740 0%, #181d28 70%); border: 1px solid var(--accent); transition: transform 0.16s; }
 .flow-banner:hover { transform: translateY(-2px); }
-.flow-banner::after { content: ''; position: absolute; right: -40px; top: -50px; width: 200px; height: 200px; background: radial-gradient(circle, #7c9cff44, transparent 70%); }
+.flow-banner::after { content: ''; position: absolute; right: -40px; top: -50px; width: 200px; height: 200px; background: radial-gradient(circle, #6fcf9f44, transparent 70%); }
 .fb-left { display: flex; align-items: center; gap: 18px; z-index: 1; }
 .fb-emoji { font-size: 40px; }
 .fb-left strong { font-size: 19px; }
@@ -977,7 +977,7 @@ code { font-family: var(--mono); background: #eef3ff; color: var(--accent); padd
 .bmc-cell li { font-size: 11.8px; margin: 3px 0; color: var(--text); }
 
 /* Monetization / commercialization */
-.mon-model { background: linear-gradient(120deg, rgba(124,156,255,0.14), rgba(124,156,255,0.03)); border: 1px solid var(--accent); border-radius: 12px; padding: 16px; position: relative; }
+.mon-model { background: linear-gradient(120deg, rgba(22,132,90,0.14), rgba(22,132,90,0.03)); border: 1px solid var(--accent); border-radius: 12px; padding: 16px; position: relative; }
 .mon-model-badge { position: absolute; top: -9px; left: 14px; background: var(--accent); color: #0b0e16; font-size: 11px; font-weight: 700; padding: 2px 10px; border-radius: 999px; }
 .mon-model strong { font-size: 18px; display: block; margin: 4px 0 6px; }
 .mon-model p { margin: 0; color: var(--muted); font-size: 13.5px; }
@@ -1003,7 +1003,7 @@ code { font-family: var(--mono); background: #eef3ff; color: var(--accent); padd
 .ladder-step { flex: 1; display: flex; flex-direction: column; min-width: 0; }
 .ladder-col { height: 170px; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; }
 .ladder-tier { font-size: 12px; color: var(--muted); margin-bottom: 6px; text-align: center; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; }
-.ladder-bar { width: 78%; border-radius: 8px 8px 0 0; background: linear-gradient(180deg, var(--accent), #7c9cff33); display: flex; align-items: flex-start; justify-content: center; padding-top: 8px; box-shadow: inset 0 1px 0 #fff3; transition: height 0.4s ease; }
+.ladder-bar { width: 78%; border-radius: 8px 8px 0 0; background: linear-gradient(180deg, var(--accent), #6fcf9f33); display: flex; align-items: flex-start; justify-content: center; padding-top: 8px; box-shadow: inset 0 1px 0 #fff3; transition: height 0.4s ease; }
 .ladder-price { font-size: 12.5px; font-weight: 800; color: #0b0e16; background: #ffffffcc; border-radius: 6px; padding: 1px 7px; }
 .ladder-trigger { margin-top: 8px; padding-top: 8px; border-top: 1px dashed var(--line); font-size: 11.5px; color: var(--muted); display: flex; gap: 5px; align-items: flex-start; line-height: 1.4; }
 .ladder-trigger span { color: var(--accent); }
@@ -1154,7 +1154,7 @@ code { font-family: var(--mono); background: #eef3ff; color: var(--accent); padd
   .hero h1 { font-size: 30px; }
 }
 
-/* ---------------- Light blue business visual pass ---------------- */
+/* ---------------- Light green business visual pass ---------------- */
 body {
   background: #ffffff !important;
 }
@@ -1209,7 +1209,7 @@ body {
   gap: 8px;
   min-height: 34px;
   padding: 0 13px;
-  border: 1px solid rgba(0, 47, 167, 0.28);
+  border: 1px solid rgba(22, 132, 90, 0.28);
   border-radius: 9px;
   background: #ffffff;
   color: var(--accent);
@@ -1284,7 +1284,7 @@ body {
   width: fit-content;
   margin: 0 0 10px;
   padding: 3px 9px;
-  border: 1px solid rgba(0, 47, 167, 0.18);
+  border: 1px solid rgba(22, 132, 90, 0.18);
   border-radius: 999px;
   background: var(--panel-2);
   color: var(--accent);
@@ -1348,7 +1348,7 @@ body {
 }
 
 .flow-pip.done .flow-pip-n {
-  border-color: rgba(0, 47, 167, 0.24);
+  border-color: rgba(22, 132, 90, 0.24);
   background: var(--panel-2);
   color: var(--accent);
 }
@@ -1550,11 +1550,11 @@ body {
 
 /* ---------------- Button normalization ---------------- */
 :root {
-  --btn-blue: #002fa7;
-  --btn-blue-hover: #155eef;
-  --btn-border: rgba(0, 47, 167, 0.28);
-  --btn-border-strong: rgba(0, 47, 167, 0.58);
-  --btn-bg-hover: #eef3ff;
+  --btn-green: #16845a;
+  --btn-green-hover: #2aa66b;
+  --btn-border: rgba(22, 132, 90, 0.28);
+  --btn-border-strong: rgba(22, 132, 90, 0.58);
+  --btn-bg-hover: #effaf4;
 }
 
 button,
@@ -1605,7 +1605,7 @@ button:not(.primary):not(.modal-x):not(.cmp-del):not(.ws-del):not(.lib-del):not(
 .guide-cta.ghost {
   background: #ffffff !important;
   border: 1px solid var(--btn-border) !important;
-  color: var(--btn-blue) !important;
+  color: var(--btn-green) !important;
   box-shadow: none !important;
 }
 
@@ -1640,7 +1640,7 @@ button:not(.primary):not(.modal-x):not(.cmp-del):not(.ws-del):not(.lib-del):not(
 .cmp-para-links a:hover {
   background: var(--btn-bg-hover) !important;
   border-color: var(--btn-border-strong) !important;
-  color: var(--btn-blue) !important;
+  color: var(--btn-green) !important;
   filter: none !important;
   transform: none !important;
 }
@@ -1650,8 +1650,8 @@ button:not(.primary):not(.modal-x):not(.cmp-del):not(.ws-del):not(.lib-del):not(
 .ppt-cta-btn,
 .cmp-savebtn,
 .report-button {
-  background: var(--btn-blue) !important;
-  border: 1px solid var(--btn-blue) !important;
+  background: var(--btn-green) !important;
+  border: 1px solid var(--btn-green) !important;
   color: #ffffff !important;
   box-shadow: none !important;
 }
@@ -1661,8 +1661,8 @@ button:not(.primary):not(.modal-x):not(.cmp-del):not(.ws-del):not(.lib-del):not(
 .ppt-cta-btn:hover:not(:disabled),
 .cmp-savebtn:hover:not(:disabled),
 .report-button:hover:not(:disabled) {
-  background: var(--btn-blue-hover) !important;
-  border-color: var(--btn-blue-hover) !important;
+  background: var(--btn-green-hover) !important;
+  border-color: var(--btn-green-hover) !important;
   color: #ffffff !important;
   filter: none !important;
   transform: none !important;
@@ -1678,16 +1678,16 @@ button:not(.primary):not(.modal-x):not(.cmp-del):not(.ws-del):not(.lib-del):not(
 .flow-pip.on,
 .char.on {
   background: var(--btn-bg-hover) !important;
-  border-color: var(--btn-blue) !important;
-  color: var(--btn-blue) !important;
+  border-color: var(--btn-green) !important;
+  color: var(--btn-green) !important;
   font-weight: 800;
 }
 
 .flow-pip.on .flow-pip-n,
 .step.active .step-badge,
 .flow-pip.done .flow-pip-n {
-  background: var(--btn-blue) !important;
-  border-color: var(--btn-blue) !important;
+  background: var(--btn-green) !important;
+  border-color: var(--btn-green) !important;
   color: #ffffff !important;
 }
 
@@ -1695,7 +1695,7 @@ button:not(.primary):not(.modal-x):not(.cmp-del):not(.ws-del):not(.lib-del):not(
 .cmp-mini em.main,
 .cmp-role.main,
 .bi-chart .chart-type {
-  background: var(--btn-blue) !important;
+  background: var(--btn-green) !important;
   color: #ffffff !important;
 }
 

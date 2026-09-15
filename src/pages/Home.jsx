@@ -65,7 +65,7 @@ export default function Home() {
         <div className="banner-row">
           <Link to="/advisor" className="advisor-banner">
             <div className="ab-left">
-              <span className="ab-emoji">🧭</span>
+              <span className="ab-emoji">💡</span>
               <div>
                 <strong>AI 产品顾问</strong>
                 <p>填入你的产品 → 专家诊断 → 推荐范式 + 落地方案 + demo 设想。还能建产品库。</p>
