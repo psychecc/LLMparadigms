@@ -1,4 +1,6 @@
 import express from 'express'
+import path from 'path'
+import { fileURLToPath } from 'url'
 import { jsonrepair } from 'jsonrepair'
 import { streamText, completeText, resolve, anthropicClient } from './providers.js'
 
@@ -33,6 +35,13 @@ if (!process.env.ANTHROPIC_API_KEY && !process.env.DEEPSEEK_API_KEY) {
 
 const app = express()
 app.use(express.json({ limit: '2mb' }))
+
+// --- Static hosting for the Vite build (dist/) + SPA fallback ---
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
+const DIST_DIR = path.join(__dirname, '../dist')
+
+app.use(express.static(DIST_DIR))
 
 // --- Streaming chat: writes raw text deltas to the response body ---
 app.post('/api/chat', async (req, res) => {
@@ -952,6 +961,13 @@ app.post('/api/roi', async (req, res) => {
     const text = await completeText({ ...req.body, system: sys, messages: [{ role: 'user', content: msg }], format: ROI_SCHEMA, effort: 'medium', max_tokens: 2500 })
     res.json(parseModelJson(text))
   } catch (e) { res.status(500).json({ error: e?.message || String(e) }) }
+})
+
+// --- SPA fallback: must be AFTER all /api routes so it never shadows them ---
+app.get(/^\/(?!api\/).*/, (req, res, next) => {
+  res.sendFile(path.join(DIST_DIR, 'index.html'), (err) => {
+    if (err) next()
+  })
 })
 
 const server = app.listen(PORT, () => console.log(`[server] proxy listening on http://localhost:${PORT}`))
